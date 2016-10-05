@@ -1,4 +1,4 @@
-# Day 003: Shell Permissions #
+# Day 002: Shell Permissions #
 Important Links:
 http://linuxcommand.org/lc3_lts0090.php
 

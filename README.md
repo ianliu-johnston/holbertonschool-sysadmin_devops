@@ -1,1 +1,1 @@
-# Holberton School Day 001: Shell Basics #
+# Holberton School Day 001-003: Shell Basics #
