@@ -53,3 +53,9 @@ Write a script that changes the owner and the group owner of the file _hello to 
 
 16.If Only: 16-if_only
 Write a script that changes the owner of the file hello to betty only if it is owned by the user guillaume. (file "hello" is in the current working directory)
+
+17.Star Wars: 100-Star_Wars
+Write a script to play starwars in the terminal.
+
+18.RTFM: 101-man_holberton
+Create a man page that looks like the one on the intranet.
