@@ -95,25 +95,20 @@ Commands used: echo, cat, head, tail, find, wc, sort, uniq, grep, tr, rev, cut
 	Write a script that displays all users and their home directories, sorted by users.
 	cut has a delimiter flag. You need to specify the field that you want. 
 100-empty_casks
-Write a command that finds all empty files and directores in the current directory and all sub-directories. Only the names of the files and directoires should be displayed (not the entire path.)
-Hidden files should be listed, one file name per line. The listing should end with a new line character. You are not allowed to use basename, grep, egrep, fgrep, or rgrep.  
-
+	Write a command that finds all empty files and directores in the current directory and all sub-directories. Only the names of the files and directoires should be displayed (not the entire path.)
+	Hidden files should be listed, one file name per line. The listing should end with a new line character. You are not allowed to use basename, grep, egrep, fgrep, or rgrep.  
+	Uses the printf and empty flags. 
 
 101-gifs
-Write a script that lists all the files with a .gif extension in the current directory and all its sub-directories.
-Hidden files should be listed. Only regular files, not directories should be listed. The names of the files should be displayed without their extensions. The files should be sorted by byte values, but case-insensitive (file aaa should be listed before bbb, file .b should be listed before file a, and file Rona should be listed after file jay)
-one file name per line. The listing should end with a new line. Not allowed to use basename, grep, egrep, fgrep, or rgrep.
-
+	Write a script that lists all the files with a .gif extension in the current directory and all its sub-directories.
+Hidden files should be listed. Only regular files, not directories should be listed. The names of the files should be displayed without their extensions. The files should be sorted by byte values, but case-insensitive (file aaa should be listed before bbb, file .b should be listed before file a, and file Rona should be listed after file Jay) One file name per line. The listing should end with a new line. Not allowed to use basename, grep, egrep, fgrep or rgrep.
 
 102-acrostic
 
+Create a script that decodes acrostics that use the first letter of each line. The decoded message has to end with a new line. You are not allowed to use grep, egrep, fgrep or rgrep
 
 
-103-the_biggest_fan
-
-
-104-tsv
-
+103-tsv
 Write a script that parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests.
 Order by numbers of requests, most active host or IP at the top. Not allowed to use grep, egrep, fgrep, or rgrep.
 .
