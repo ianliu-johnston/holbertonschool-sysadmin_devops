@@ -1,4 +1,6 @@
 # Day 002: Shell Permissions #
+Commands: chmod, sudo, su, chown, chgrp, id, groups, whoami, adduser, useradd, addgroup
+
 Important Links:
 http://linuxcommand.org/lc3_lts0090.php
 

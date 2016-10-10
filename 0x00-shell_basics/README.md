@@ -1,4 +1,5 @@
 # Shell Scripting Basics #
+Commands: cd, ls, pwd, less, file, ln, cp, mv, rm, mkdir, type, which, help, man
 
 0. Prints present working directory with pwd
 1. Lists current directory contents
