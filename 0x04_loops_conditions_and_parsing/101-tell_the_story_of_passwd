@@ -1,2 +1,9 @@
 #!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+#Prints the contents of the /etc/passwd file with a while loop and only displays fields 1, 3 and 6
+while read -r; do 
+	echo -e -n "The user" `echo "$REPLY"| cut -d ':' -f1;` "is part of the " 
+	echo -e -n `echo -e "$REPLY"| cut -d ':' -f3;` 
+	echo -e -n "gang, lives in " "$REPLY."| cut -d ':' -f7; 
+done < /etc/passwd
+
+#The user root is part of the USERNAME gang, lives in HOME_DIRECTORY and rides COMMAND/SHELL. USER ID's place is protected by the passcode PASSWORD, more info about the user here: USER ID INFO
