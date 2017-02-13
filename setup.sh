@@ -17,6 +17,7 @@ echo -e "a.out\n*.swp\n*~\n" >> .gitignore
 touch $(grep File: $INPUT | cut -d \> -f3 | cut -d \< -f1 | tr -d ',')
 #Setup templates for the files, depending on their type.
 echo '#!/usr/bin/env bash' > sh_template
+echo '#DESCRIPTION OF FUNCTIONALITY' >> sh_template
 find . -type f -name "*[0-9]-*" -exec cp sh_template '{}' \; -exec chmod u+x '{}' \;
 rm *template
 # Check if any complete-the-code downloads are present.
