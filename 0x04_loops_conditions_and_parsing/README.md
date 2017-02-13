@@ -1,18 +1,37 @@
 #Holberton School - 0x04_loops_conditions_and_parsing
-Description
+Brief into to loops, conditionals and parsing
 
 ## New commands / functions used:
-``gcc``
+* ``while ((1)); do echo infinity; done``
+* ``for ((i=1; i<10; i++)); do echo $i; done``
+* ``until ((i>10)); do echo $i; done``
+* ``i=$((i+1))`` -- Increment i
+* ``awk '/search_expression/ {some command;}'``
+* ``if [[ -s "my_non_empty_file ]]; then echo It passed!; fi``
+* `` case "$i" in 1) echo one ;; 2) echo two ;; *) echo you get the idea;; esac``
+
+```
+case "$1" in
+1) echo one
+   ;;
+2) echo two
+  ;;
+*) echo all the rest
+  ;;
+esac
+```
 
 ## Helpful Links
-* [link](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html)
-* [link](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html)
-* [link](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_03.html)
-* [link](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-7.html#ss7.1)
-* [link](http://tldp.org/LDP/abs/html/ops.html)
-* [link](http://tldp.org/LDP/abs/html/comparison-ops.html)
-* [link](http://tldp.org/LDP/abs/html/fto.html)
-* [link](https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html)
+* [How For Loops work in Bash](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html)
+* [How While Loops work in Bash](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html)
+* [How Until Loops work in Bash](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_03.html)
+* [Examples of Bash Loops](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-7.html#ss7.1)
+* [Variable Assignment and Arithmetic](http://tldp.org/LDP/abs/html/ops.html)
+* [Comparison Operators](http://tldp.org/LDP/abs/html/comparison-ops.html)
+* [Example Case Statements in Bash](http://www.thegeekstuff.com/2010/07/bash-case-statement/))
+* [Test File Operators](http://tldp.org/LDP/abs/html/fto.html)
+* [Script Portability](https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html)
+* [Basic AWK usage](https://www.digitalocean.com/community/tutorials/how-to-use-the-awk-language-to-manipulate-text-in-linux)
 
 ## Description of Files
 <h6>0-RSA_public_key.pub</h6>
@@ -36,4 +55,4 @@ Description
 <h6>9-to_file_or_not_to_file</h6>
 
 <h6>10-fizzbuzz</h6>
-
+Fizz Buzz: Classic coding problem
