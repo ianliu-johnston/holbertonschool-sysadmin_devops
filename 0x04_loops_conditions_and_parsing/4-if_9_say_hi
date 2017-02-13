@@ -1,1 +1,10 @@
 #!/usr/bin/env bash
+#Prints Holberton School ten times to stdout using a while loop. On the 9th time, prints Hi and a new line
+i=0
+while ((i<10)); do 
+	if [ "$i" == 9 ]; then
+	   	echo Hi 
+	fi 
+	echo Holberton School 
+	i=$((i+1))
+done
