@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+#Prints the contents of the /etc/passwd file with a while loop and only displays fields 1, 3 and 6
+while read -r; do echo "$REPLY"| cut -d ':' -f1,3,6; done < /etc/passwd
