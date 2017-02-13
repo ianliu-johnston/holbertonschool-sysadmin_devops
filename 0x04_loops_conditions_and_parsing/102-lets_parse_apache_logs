@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+#Use awk to parse a log
+awk '{FS=" "; print $1,$9;}' apache-access.log
