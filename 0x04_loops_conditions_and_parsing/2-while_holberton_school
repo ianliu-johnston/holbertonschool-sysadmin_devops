@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #Prints Holberton School to stdout 10 times with a while loop.
 i=10
-while ((i > 0)); do echo Holberton School; i=$(($i-1)); done
+while ((i > 0)); do echo Holberton School; i=$((i-1)); done
