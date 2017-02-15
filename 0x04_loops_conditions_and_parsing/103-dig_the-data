@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#Use awk to parse a log
-awk '{FS=" "; print $1,$9;}' apache-access.log | sort | uniq -c | sort -hr
