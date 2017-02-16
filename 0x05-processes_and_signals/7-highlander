@@ -1,2 +1,6 @@
 #!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+while :; do
+	trap "echo I am invincible!!!" SIGTERM
+	echo To infinity and beyond
+	sleep 2
+done
