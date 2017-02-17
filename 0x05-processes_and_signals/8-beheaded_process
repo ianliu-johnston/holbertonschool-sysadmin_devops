@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+kill -9 $(ps -au | grep highlander | awk '{print $2}' | head -1)
