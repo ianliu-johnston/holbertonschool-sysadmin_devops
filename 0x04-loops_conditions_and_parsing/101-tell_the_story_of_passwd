@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Prints the contents of the /etc/passwd file with a while loop and only displays fields 1, 3 and 6
 while IFS=':' read -r F1 F2 F3 F4 F5 F6 F7; do 
-	echo "The user $F1 is part of the $F4 gang, lives in $F6 and rides $F7. $F3's place is protected by the passcode $F2, more info about the user: $F5"
+	echo "The user $F1 is part of the $F4 gang, lives in $F6 and rides $F7. $F3's place is protected by the passcode $F2, more info about the user here: $F5"
 done < /etc/passwd
 
 #The user root is part of the USERNAME gang, lives in HOME_DIRECTORY and rides COMMAND/SHELL. USER ID's place is protected by the passcode PASSWORD, more info about the user here: USER ID INFO
