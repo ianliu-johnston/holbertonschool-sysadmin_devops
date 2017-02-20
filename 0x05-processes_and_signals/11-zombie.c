@@ -36,8 +36,8 @@ int main(void)
 		}
 	}
 	sleep(100);
-	while(--i > 0)
-		zombie[i]= wait(&stat);
+	while (--i > 0)
+		zombie[i] = wait(&stat);
 	infinite_while();
 
 	return (0);
