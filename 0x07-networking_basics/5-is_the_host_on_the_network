@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
+# Pings a server 5 times.
 if [[ -z "$1" ]]; then
-	echo "Usage: ./5-is_the_host_on_the_network 198.168.1.1"
+	echo "Usage: ./5-is_the_host_on_the_network {IP_ADDRESS}"
 fi
-ping -c 5 $1
+ping -c 5 "$1"

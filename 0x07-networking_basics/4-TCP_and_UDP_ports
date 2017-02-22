@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# lists all listening network ports and the pid of the processes listening to them
 sudo netstat -l -p
