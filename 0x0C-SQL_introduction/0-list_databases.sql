@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+-- Lists all databases.
+SHOW DATABASES;

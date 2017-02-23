@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+-- Creates a table with values
+CREATE TABLE first_table(id INT, name VARCHAR(256);

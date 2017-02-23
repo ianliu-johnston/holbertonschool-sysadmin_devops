@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+-- Deletes a database.
+DROP DATABASE hbtn_0c_0

@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+-- Creates a database.
+CREATE DATABASE hbtn_0c_0;
