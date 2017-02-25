@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# creates an ssh key
 ssh -i ~/.ssh/holberton ubuntu@54.87.125.252
