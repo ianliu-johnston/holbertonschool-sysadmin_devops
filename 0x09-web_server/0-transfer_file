@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Transfers a file with scp
-if [[ "$#" -ne 4 ]]; then
+if [[ "$#" -le 3 ]]; then
 	echo Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY
 	exit 1
 fi
