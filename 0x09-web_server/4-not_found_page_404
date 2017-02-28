@@ -4,5 +4,5 @@ sudo apt-get update
 sudo apt-get install -y nginx
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
 echo -e "Ceci n'est pas une page\n" | sudo tee /usr/share/nginx/html/404.html
-sudo sed -i 's/#error_page 404 \/404.html/error_page 404 \/404.html' /etc/nginx/sites-available/default
+sudo sed -i 's|#error_page 404 \/404.html|error_page 404 \/404.html|' /etc/nginx/sites-available/default
 sudo service nginx start 
