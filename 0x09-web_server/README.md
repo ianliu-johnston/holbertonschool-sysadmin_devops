@@ -2,7 +2,7 @@
 Intro to webserver automation
 
 ## New commands / functions used:
-``scp``, ``curl``
+``scp``, ``curl``,``if [[ "$#" -ne 4 ]]; then`` - if number of arguments does not equal 4 then do whatever, enter ``<enter>, ~, .`` separately to exit out of a timed out ssh session.
 
 ## Helpful Links
 * [Getting started with how the web works](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
@@ -14,6 +14,10 @@ Intro to webserver automation
 * [Why the best programmers are lazy and act dumb](https://www.techwell.com/techwell-insights/2013/12/why-best-programmers-are-lazy-and-act-dumb)
 * [What is apt-get -y?](http://askubuntu.com/questions/672892/what-does-y-mean-in-apt-get-y-install-command)
 * [Replace multiple lines with sed](http://stackoverflow.com/questions/26041088/sed-replace-line-with-multiline-variable)
+* [Gandi.net for domain names](https://www.gandi.net/)
+* [My domain name: concati.tech](https://concati.tech)
+* [How to configure nginx](https://www.linode.com/docs/websites/nginx/how-to-configure-nginx)
+* [Digital Ocean: Nginx redirects](https://www.digitalocean.com/community/tutorials/how-to-create-temporary-and-permanent-redirects-with-nginx)
 
 ## Description of Files
 <h6>0-transfer_file</h6>
