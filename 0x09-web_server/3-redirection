@@ -2,7 +2,9 @@
 # Sets up a brand new nginx server with a redirect page.
 sudo apt-get -y nginx
 sudo service nginx start
-#sudo touch /usr/share/nginx/html/redirect_me
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-sudo sed -i '26s/^/        rewrite ^\/redirect_me/ http:\/\/ianxaunliu-johnston.com permanent\;\n/' /etc/nginx/sites-available/default 
+grep -q rewrite /etc/nginx/sites-available/default
+if [[ !"$?" -eq 0 ]]; then
+	sudo sed -i '26s/^/        rewrite ^\/redirect_me/ http:\/\/ianxaunliu-johnston.com permanent\;\n/' /etc/nginx/sites-available/default 
+fi
 sudo service nginx restart 
