@@ -3,8 +3,6 @@
 sudo apt-get -y nginx
 sudo service nginx start
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-grep -q rewrite /etc/nginx/sites-available/default
-if [[ !"$?" -eq 0 ]]; then
-	sudo sed -i '26s/^/        rewrite ^\/redirect_me/ http:\/\/ianxaunliu-johnston.com permanent\;\n/' /etc/nginx/sites-available/default 
-fi
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+sudo sed -i '26s/^/        rewrite ^\/redirect_me/ http:\/\/ianxaunliu-johnston.com permanent\;\n/' /etc/nginx/sites-available/default 
 sudo service nginx restart 
