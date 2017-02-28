@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Run as root, echos pid into /var/run and traps then runs an infinite loop
 
 echo $$ > /var/run/holbertonscript.pid
 
