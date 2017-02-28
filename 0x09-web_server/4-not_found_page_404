@@ -6,8 +6,8 @@ sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.ba
 echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/usr_404.html
 sudo sed -i '26s/^/        rewrite ^\/redirect_me\/ http:\/\/ianxaunliu-johnston.com permanent\;\n/' /etc/nginx/sites-available/default 
-sudo sed -i '27i\        error_page 404 usr_404.html;\n/' /etc/nginx/sites-available/default 
-sudo sed -i '28i\        location = /usr_404.html {\n/' /etc/nginx/sites-available/default 
-sudo sed -i '29i\            root /usr/share/nginx/html;\n/' /etc/nginx/sites-available/default 
+sudo sed -i '27i\        error_page 404 usr_404.html;\n' /etc/nginx/sites-available/default 
+sudo sed -i '28i\        location = \/usr_404.html {\n' /etc/nginx/sites-available/default 
+sudo sed -i '29i\            root \/usr\/share\/nginx\/html;\n' /etc/nginx/sites-available/default 
 sudo sed -i '30i\            internal;\n        }\n' /etc/nginx/sites-available/default
 sudo service nginx start 
