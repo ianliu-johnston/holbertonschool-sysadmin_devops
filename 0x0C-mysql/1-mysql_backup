@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
 #DESCRIPTION OF FUNCTIONALITY
+mysqldump -u root -p"$1" backup.sql
+tar -vczf "$(date +'%d-%m-%Y').tar.gz" backup.sql
