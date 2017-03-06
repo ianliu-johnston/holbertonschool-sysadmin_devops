@@ -1,2 +1,10 @@
 #!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+# Prints out information about subdomains
+if [[ "$#" -eq '1' ]]; then
+	ALL=$(dig $1)
+	echo The subdomain $() is a $() record and points to $()
+elif [[ "$#" -eq '2' ]]; then
+	ALL=$(dig $1 | grep -A1 "ANSWER SECTION:" | grep "$2" | tail -1);
+else
+	echo "Usage: ./1-world-wide-web <DOMAIN> <SUBDOMAIN>"
+fi
