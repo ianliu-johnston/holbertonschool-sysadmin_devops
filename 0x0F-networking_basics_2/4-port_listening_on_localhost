@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# uses nc to open a socket in bash
+nc -l 98
