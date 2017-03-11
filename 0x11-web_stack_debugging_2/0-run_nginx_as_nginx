@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Fixes server
-service stop apache
-pkill apache
+#service stop apache
+#pkill apache
 #sed -i -e 's#listen 80#listen 8080#' -e 's#listen \[::\]:80#listen \[::\]:8080#' /etc/nginx/sites-available/default
-sed -i -e 's|#user www-data|user nginx|' /etc/nginx/nginx.conf
 #chown -R nginx:nginx /etc/nginx/
+sed -i -e 's|#user www-data|user nginx|' /etc/nginx/nginx.conf
 service nginx restart
