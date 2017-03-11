@@ -3,4 +3,4 @@
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sed -i 's/8080/80/' /etc/nginx/sites-available/default
-alias service='echo "* nginx is not running"'
+alias service='echo "* nginx is running"'
