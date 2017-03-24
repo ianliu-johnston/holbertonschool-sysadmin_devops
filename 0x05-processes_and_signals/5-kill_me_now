@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Kills the script from 4
-kill $(ps -u | grep infinity | head -1 | awk '{print $2}')
+kill $(pgrep "infinity")
