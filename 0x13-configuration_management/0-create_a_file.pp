@@ -1,5 +1,5 @@
 # lalalal
-file {
+file { "/tmp/holberton":
   ensure  => file,
   path    => "/tmp/holberton",
   mode    => "0744",
