@@ -1,5 +1,5 @@
-# lalalal
-file { "/tmp/holberton":
+# Creates a new file
+file { '/tmp/holberton':
   ensure  => file,
   path    => "/tmp/holberton",
   mode    => "0744",
