@@ -4,5 +4,5 @@ exec { '/bin/mv /var/www/html/wp-includes/class-wp-locale.phpp /var/www/html/wp-
 }
 
 ->file { '/var/www/html/wp-includes/class-wp-locale.phpp',
-  creates => '/var/www/html/wp-includes/class-wp-locale.phpp',
+  ensure => absent,
 }
