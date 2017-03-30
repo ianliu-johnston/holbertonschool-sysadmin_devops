@@ -1,8 +1,5 @@
 # Fixes a wordpress bug
-exec { '/bin/mv /var/www/html/wp-includes/class-wp-locale.phpp /var/www/html/wp-includes/class-wp-locale.php':
-  creates => '/var/www/html/wp-includes/class-wp-locale.php',
-}
-
-->file { '/var/www/html/wp-includes/class-wp-locale.phpp',
-  ensure => absent,
+exec { 'fix_typo':
+  command => 'sed -i "s|.phpp|.php|g" /var/www/html/wp-settings.php'
+  path => ['/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin']
 }
