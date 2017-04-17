@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# install and configure HAPROXY
+sudo apt-get update
+sudo apt-get install -y haproxy
+sudo sed -i 's|ENABLED=0|ENABLED=1|' /etc/default/haproxy
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
+sudo sed -i '$s|$|\n\nlisten appname 0.0.0.0:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 62-web-01 54.87.125.252:80 check\n\tserver 62-web-02 54.90.220.148:80 check|' /etc/haproxy/haproxy.cfg
+sudo service haproxy start
+ 
