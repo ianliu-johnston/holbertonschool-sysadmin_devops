@@ -6,12 +6,12 @@ where 2 is the user id of Ervin Howell.
 Fake data from "https://jsonplaceholder.typicode.com"
 """
 import requests
-from sys import argv
+import sys
 
 
 if __name__ == "__main__":
     root = "https://jsonplaceholder.typicode.com"
-    users = requests.get(root + "/users", params={"id": argv[1]})
+    users = requests.get(root + "/users", params={"id": sys.argv[1]})
     for names in users.json():
         usr_id = names.get('id')
         todo = requests.get(root + "/todos", params={"userId": usr_id})
