@@ -5,24 +5,21 @@ Usage: ./1-export_to_CSV.py 2
 where 2 is a user id
 Fake data from "https://jsonplaceholder.typicode.com"
 """
-import requests
-from sys import argv
 import json
+import requests
+import sys
 
 
 if __name__ == "__main__":
     root = "https://jsonplaceholder.typicode.com"
-    users = requests.get(root + "/users", params={"id" : argv[1]})
+    users = requests.get(root + "/users", params={"id": sys.argv[1]})
     for names in users.json():
         usr_id = names.get('id')
-        todo = requests.get(root + "/todos", params={"userId" : usr_id })
+        todo = requests.get(root + "/todos", params={"userId": usr_id})
         csv_arr = []
         for tasks in todo.json():
             csv_arr.append({"task": tasks.get("title"),
                             "completed": str(tasks.get("completed")),
                             "username": names.get("name")})
-        with open(argv[1] + ".json", 'a') as f:
+        with open(sys.argv[1] + ".json", 'a') as f:
             f.write(json.dumps({"2": csv_arr}))
-        """
-        with open(argv[1] + ".json", 'a') as f:
-        """
