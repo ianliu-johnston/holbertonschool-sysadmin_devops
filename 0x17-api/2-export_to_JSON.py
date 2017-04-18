@@ -7,7 +7,7 @@ Fake data from "https://jsonplaceholder.typicode.com"
 """
 import requests
 from sys import argv
-import csv
+import json
 
 
 if __name__ == "__main__":
@@ -17,9 +17,12 @@ if __name__ == "__main__":
         usr_id = names.get('id')
         todo = requests.get(root + "/todos", params={"userId" : usr_id })
         csv_arr = []
-        with open(argv[1] + ".csv", 'a') as f:
-            writer = csv.writer(f, quoting=csv.QUOTE_ALL)
-            for tasks in todo.json():
-                writer.writerow([names.get('id'),names.get('name'),
-                               str(tasks.get('completed')), tasks.get('title')
-                               ])
+        for tasks in todo.json():
+            csv_arr.append({"task": tasks.get("title"),
+                            "completed": str(tasks.get("completed")),
+                            "username": names.get("name")})
+        with open(argv[1] + ".json", 'a') as f:
+            f.write(json.dumps({"2": csv_arr}))
+        """
+        with open(argv[1] + ".json", 'a') as f:
+        """
