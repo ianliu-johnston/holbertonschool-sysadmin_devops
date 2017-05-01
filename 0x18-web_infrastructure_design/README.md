@@ -16,6 +16,8 @@ Whiteboarding tests for design of web application infrastructures
 ## Description of Files
 <h6>0-simple_web_stack</h6>
 ![Simple Web Stack][WhatHappensGoogle_whiteboard.png]
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 
 <h6>1-distributed_web_infrastructure</h6>
 ![Distributed Web Infrastructure]()
