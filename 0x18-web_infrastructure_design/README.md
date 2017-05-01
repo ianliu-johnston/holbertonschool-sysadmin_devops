@@ -15,11 +15,8 @@ Whiteboarding tests for design of web application infrastructures
 
 ## Description of Files
 <h6>0-simple_web_stack</h6>
-![Simple Web Stack][WhatHappensGoogle_whiteboard.png]
 
-
-
-![Markdown Here logo](https://raw.github.com/adam-p/markdown-here/master/src/common/images/icon48.png) Markdown Here
+![Simple Web Stack](WhatHappensGoogle_whiteboard.png "Simple Web Stack") Simple Web Stack
 
 
 
