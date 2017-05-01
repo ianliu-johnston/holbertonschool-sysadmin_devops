@@ -1,4 +1,4 @@
-#Holberton School - 0x18-web_infrastructure_design
+# Holberton School - 0x18-web_infrastructure_design
 Whiteboarding tests for design of web application infrastructures
 
 ## Helpful Links
@@ -15,7 +15,7 @@ Whiteboarding tests for design of web application infrastructures
 
 ## Description of Files
 <h6>0-simple_web_stack</h6>
-![Simple Web Stack]()
+![Simple Web Stack](./WhatHappensGoogle_whiteboard.png)
 
 <h6>1-distributed_web_infrastructure</h6>
 ![Distributed Web Infrastructure]()
