@@ -7,10 +7,15 @@ Whiteboarding tests for design of web application infrastructures
 * [DNS record types](https://pressable.com/blog/2014/12/23/dns-record-types-explained/)
 * [About /etc/hosts](http://www.linfo.org/etc_hosts.html)
 * [Gandi.net Glue Records](https://wiki.gandi.net/en/glossary/glue-record)
+* [SSL / TLS] (https://www.digicert.com/ssl.htm)
+* [Round robin DNS](https://en.wikipedia.org/wiki/Round-robin_DNS)
 
 ### Errors
 * [Single point of failure](https://en.wikipedia.org/wiki/Single_point_of_failure)
 * [How to avoid downtime when deploying new code](https://softwareengineering.stackexchange.com/questions/35063/how-do-you-update-your-production-codebase-database-schema-without-causing-downt#answers-header)
+
+### MySQL
+* [Setup Master-Slave MySQL DBs](https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql)
 
 ### Networks
 * [Wikipedia: Autonomous System](https://en.wikipedia.org/wiki/Autonomous_system_(Internet))
@@ -24,7 +29,7 @@ Whiteboarding tests for design of web application infrastructures
 
 ### Servers
 * [Application Server vs Web Server](https://www.nginx.com/resources/glossary/application-server-vs-web-server/)
-* [WSGI Servers Wikipedia](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface)
+* [Wikipedia WSGI Servers Python](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface)
 * [Wikipedia LAMP stack](https://en.wikipedia.org/wiki/LAMP_(software_bundle))
 
 ## Description of Files
@@ -47,6 +52,13 @@ Whiteboarding tests for design of web application infrastructures
 
 
 <h6>1-distributed_web_infrastructure</h6>
+
+* For every additional element, why you are adding it
+* What distribution algorithm your load balancer is configured with and how it works
+* Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+* How a database Master-Slave cluster works
+* What is the difference between the Master node and the Slave node in regard to the application
+
 ![Distributed Web Infrastructure]()
 
 <h6>2-secured_and_monitored_web_infrastructure</h6>
