@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-import sys
 import requests
-import json
-import re
 """
 Module to interface with the reddit api
 """

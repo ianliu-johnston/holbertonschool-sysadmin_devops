@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import sys
 import requests
 """
 Module to interface with the reddit api
