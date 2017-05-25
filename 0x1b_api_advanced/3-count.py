@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import requests
+import sys
 """
 Module to interface with the reddit api
 """
@@ -38,10 +39,8 @@ def count_words(subreddit, word_list=[], after=None, all_results=[]):
             print("{:s}: {:d}".format(key, word_dict[key]))
         return(all_results)
 
-"""
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Please pass an argument for the subreddit to search.")
     else:
         print(len(count_words(sys.argv[1], [x for x in sys.argv[2].split()])))
-"""

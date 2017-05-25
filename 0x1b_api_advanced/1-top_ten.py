@@ -18,8 +18,21 @@ def top_ten(subreddit):
         for data in r.json()['data'].get('children'):
             new_lst.append(data['data'].get('title'))
             count += 1
-            if count > 11:
+            if count > 9:
                 break
         print("\n".join(x for x in new_lst))
     except Exception as err:
         print("None")
+
+"""
+in-file tests
+if __name__ == "__main__":
+    # Should return correctly and print to stdout
+    top_ten("pokemon")
+
+    # Should print None to stdout
+    top_ten("alkjaeoifjaofjalskdjfoasijeflaksjf")
+
+    # Should print None to stdout -- queries a different url
+    top_ten("pokemon/la")
+"""
