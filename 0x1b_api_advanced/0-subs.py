@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import sys
 import requests
 """
 Module to interface with the reddit api
@@ -12,7 +13,7 @@ def number_of_subscribers(subreddit):
     url = 'https://reddit.com/r/' + subreddit + '/about/.json'
     headers = {'User-Agent': "lala"}
     r = requests.get(url, headers=headers)
-    if r.json().get('data').get('subscribers'):
+    try:
         return(r.json().get('data').get('subscribers'))
-    else:
+    except:
         return(0)
