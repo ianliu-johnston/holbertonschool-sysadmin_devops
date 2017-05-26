@@ -31,7 +31,7 @@ def count_words(subreddit, word_list=[], after=None, all_results=[]):
         for item in all_results:
             line = item.lower()
             for word in word_list:
-                if word.lower() in line:
+                if word in line:
                     word_dict[word] += 1
         for key in word_dict:
             print("{:s}: {:d}".format(key, word_dict[key]))
