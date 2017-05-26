@@ -11,21 +11,16 @@ def count_words(subreddit, word_list=[], after=None, all_results=[]):
     Uses the reddit api to get a count of search terms from subreddit hot posts
     """
     param = {}
+    new_after = None
     if after is not None:
         param = {'after': after}
     url = 'https://reddit.com/r/' + subreddit + '/hot/.json'
     headers = {'User-Agent': "lala"}
     try:
-        r = requests.get(
-                url,
-                headers=headers,
-                params=param,
-                allow_redirects=False
-                )
-        if r.status_code == 200:
-            new_after = r.json()['data'].get('after')
-            for data in r.json()['data'].get('children'):
-                all_results.append(data['data'].get('title'))
+        r = requests.get(url, headers=headers, params=param)
+        new_after = r.json()['data'].get('after')
+        for data in r.json()['data'].get('children'):
+            all_results.append(data['data'].get('title'))
     except:
         return(None)
     if new_after is not None:
