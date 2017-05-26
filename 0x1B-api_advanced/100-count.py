@@ -26,12 +26,12 @@ def count_words(subreddit, word_list=[], after=None, all_results=[]):
     if new_after is not None:
         return(count_words(subreddit, word_list, new_after, all_results))
     else:
-        word_dict = dict.fromkeys((word_list), 0)
+        word_dict = dict.fromkeys((word_list.lower()), 0)
         line = ""
         for item in all_results:
             line = item.lower()
             for word in word_list:
-                if word in line:
+                if word.lower() in line:
                     word_dict[word] += 1
         for key in word_dict:
             print("{:s}: {:d}".format(key, word_dict[key]))
